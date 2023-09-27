@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cbodo.inventorymanagement.controller.ModifyProductController">
+   <children>
+      <HBox layoutX="25.0" layoutY="25.0" prefHeight="650.0" prefWidth="950.0" style="-fx-border-color: black; -fx-border-radius: 10px;">
+         <children>
+            <VBox prefHeight="650.0" prefWidth="475.0" spacing="15.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="475.0" spacing="15.0">
+                     <children>
+                        <Label text="Modify Product">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="25.0" top="25.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox prefHeight="450.0" prefWidth="475.0">
+                     <children>
+                        <VBox prefHeight="60.0" prefWidth="100.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="15.0">
+                                 <children>
+                                    <Label prefWidth="75.0" text="ID" />
+                                    <TextField fx:id="idTextField" alignment="CENTER_RIGHT" disable="true" editable="false" promptText="ID" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="60.0" prefWidth="100.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="15.0">
+                                 <children>
+                                    <Label prefWidth="75.0" text="Name" />
+                                    <TextField fx:id="nameTextField" alignment="CENTER_RIGHT" onKeyTyped="#clearError" promptText="Name" />
+                                    <Label fx:id="nameCheckmarkLabel" text="Label" visible="false" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </HBox>
+                              <Label fx:id="nameValidationLabel" text="Label" visible="false">
+                                 <VBox.margin>
+                                    <Insets left="140.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="SansSerif Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="60.0" prefWidth="100.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="15.0">
+                                 <children>
+                                    <Label prefWidth="75.0" text="Price" />
+                                    <TextField fx:id="priceTextField" alignment="CENTER_RIGHT" onKeyTyped="#clearError" promptText="Price" />
+                                    <Label fx:id="priceCheckmarkLabel" text="Label" visible="false" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </HBox>
+                              <Label fx:id="priceValidationLabel" text="Label" visible="false">
+                                 <VBox.margin>
+                                    <Insets left="140.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="SansSerif Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="60.0" prefWidth="100.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="15.0">
+                                 <children>
+                                    <Label prefWidth="75.0" text="Min" />
+                                    <TextField fx:id="minTextField" alignment="CENTER_RIGHT" onKeyTyped="#clearError" promptText="Min" />
+                                    <Label fx:id="minCheckmarkLabel" text="Label" visible="false" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </HBox>
+                              <Label fx:id="minValidationLabel" text="Label" visible="false">
+                                 <VBox.margin>
+                                    <Insets left="140.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="SansSerif Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="60.0" prefWidth="100.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="15.0">
+                                 <children>
+                                    <Label prefWidth="75.0" text="Max" />
+                                    <TextField fx:id="maxTextField" alignment="CENTER_RIGHT" onKeyTyped="#clearError" promptText="Max" />
+                                    <Label fx:id="maxCheckmarkLabel" text="Label" visible="false" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </HBox>
+                              <Label fx:id="maxValidationLabel" text="Label" visible="false">
+                                 <VBox.margin>
+                                    <Insets left="140.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="SansSerif Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="60.0" prefWidth="100.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="15.0">
+                                 <children>
+                                    <Label prefWidth="75.0" text="Inventory" />
+                                    <TextField fx:id="invTextField" alignment="CENTER_RIGHT" onKeyTyped="#clearError" promptText="Inventory" />
+                                    <Label fx:id="invCheckmarkLabel" text="Label" visible="false" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </HBox>
+                              <Label fx:id="invValidationLabel" text="Label" visible="false">
+                                 <VBox.margin>
+                                    <Insets left="140.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="SansSerif Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="650.0" prefWidth="475.0">
+               <children>
+                  <VBox alignment="TOP_RIGHT" prefHeight="300.0" prefWidth="475.0" spacing="15.0">
+                     <children>
+                        <TextField fx:id="partSearchField" maxWidth="200.0" onKeyTyped="#filterParts" prefWidth="200.0" promptText="Search by Part ID or Name" />
+                        <TableView fx:id="allPartsTable" prefHeight="200.0" prefWidth="475.0">
+                           <columns>
+                              <TableColumn fx:id="allPartsIdColumn" prefWidth="100.0" text="Part ID" />
+                              <TableColumn fx:id="allPartsNameColumn" prefWidth="125.0" text="Part Name" />
+                              <TableColumn fx:id="allPartsInvColumn" prefWidth="100.0" text="Inventory Level" />
+                              <TableColumn fx:id="allPartsPriceColumn" prefWidth="125.0" text="Price/Cost per Unit" />
+                           </columns>
+                        </TableView>
+                        <Button mnemonicParsing="false" onAction="#handleAddAssociatedPartButtonAction" prefWidth="60.0" text="Add" />
+                     </children>
+                     <padding>
+                        <Insets right="25.0" top="25.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_RIGHT" prefHeight="300.0" prefWidth="475.0" spacing="15.0">
+                     <children>
+                        <TableView fx:id="associatedPartsTable" prefHeight="200.0" prefWidth="475.0">
+                           <columns>
+                              <TableColumn fx:id="associatedPartsIdColumn" prefWidth="100.0" text="Part ID" />
+                              <TableColumn fx:id="associatedPartsNameColumn" prefWidth="125.0" text="Part Name" />
+                              <TableColumn fx:id="associatedPartsInvColumn" prefWidth="100.0" text="Inventory Level" />
+                              <TableColumn fx:id="associatedPartsPriceColumn" prefWidth="125.0" text="Price/Cost per Unit" />
+                           </columns>
+                        </TableView>
+                        <HBox prefHeight="25.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="associatedPartsLabel" prefWidth="250.0" text="Label" textFill="RED" visible="false">
+                                 <font>
+                                    <Font name="SansSerif Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#handleRemoveAssociatedPartButtonAction" prefWidth="200.0" text="Remove Associated Part" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets right="25.0" top="25.0" />
+                     </padding>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#handleSaveButtonAction" prefWidth="60.0" text="Save" />
+                        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefWidth="60.0" text="Cancel" />
+                     </children>
+                     <padding>
+                        <Insets bottom="25.0" right="25.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
