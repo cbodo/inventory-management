@@ -27,8 +27,8 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("com/cbodo/inventorymanagement/main-form.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/cbodo/inventorymanagement/view/main-form.fxml"));
+        Scene scene = new Scene(loader.load());
         stage.setTitle("Inventory Management");
         stage.setScene(scene);
         scene.getRoot().setStyle("-fx-font-family: 'sans-serif';");
