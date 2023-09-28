@@ -313,7 +313,7 @@ public class MainController implements Initializable {
      */
     public void addPartButtonAction() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/add-part.fxml"));
+        loader.setLocation(getClass().getResource("/com/cbodo/inventorymanagement/view/add-part.fxml"));
         Parent parent = loader.load();
 
         AddPartController controller = loader.getController();
@@ -336,7 +336,7 @@ public class MainController implements Initializable {
      */
     @FXML public void modifyPartButtonAction() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/modify-part.fxml"));
+        loader.setLocation(getClass().getResource("/com/cbodo/inventorymanagement/view/modify-part.fxml"));
         Parent parent = loader.load();
 
         if(partsTableView.getSelectionModel().getSelectedItem() != null) {
@@ -412,7 +412,7 @@ public class MainController implements Initializable {
      */
     @FXML public void addProductButtonAction() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/add-product.fxml"));
+        loader.setLocation(getClass().getResource("/com/cbodo/inventorymanagement/view/add-product.fxml"));
         Parent parent = loader.load();
 
         AddProductController controller = loader.getController();
@@ -435,7 +435,7 @@ public class MainController implements Initializable {
      */
     @FXML public void modifyProductButtonAction() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/modify-product.fxml"));
+        loader.setLocation(getClass().getResource("/com/cbodo/inventorymanagement/view/modify-product.fxml"));
         Parent parent = loader.load();
 
         if(productsTableView.getSelectionModel().getSelectedItem() != null) {
